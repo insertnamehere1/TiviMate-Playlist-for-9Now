@@ -4,6 +4,8 @@ services:
   kodi-proxy:
     image: kodi-proxy:latest
     container_name: kodi-proxy
+    environment:
+      - TZ=Australia/Melbourne          # chage to your timezone
     volumes:
       - ./data:/kodi.proxy/addon_data   # change ./data to your actual path
     ports:
@@ -11,3 +13,4 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
+
