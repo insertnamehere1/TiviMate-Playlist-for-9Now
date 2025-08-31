@@ -14,7 +14,8 @@ RUN apk add --no-cache \
     vim \
     less \
     build-base \
-    unzip
+    unzip \
+    tzdata
 
 # Clone kodi.proxy
 RUN git clone https://github.com/matthuisman/kodi.proxy.git .
