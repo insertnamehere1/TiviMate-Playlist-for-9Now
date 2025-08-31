@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  kodi-proxy:
+    image: kodi-proxy:latest
+    container_name: kodi-proxy
+    volumes:
+      - ./data:/kodi.proxy/addon_data   # change ./data to your actual path
+    ports:
+      - "8181:8181"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
