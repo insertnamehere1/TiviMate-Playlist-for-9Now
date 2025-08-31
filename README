@@ -1,3 +1,6 @@
+This docker build is based on code provided by Matt Huisman - https://github.com/matthuisman
+Thank-you Matt.
+
 These files are used to create a docker container that servers up playlist.m3u8 files compatiable with 
 TiviMAte IPTV Player. 
 
@@ -44,4 +47,5 @@ To get the playlist for there channels set the TIVIMate playlist epg to Matt's e
 
 
 	
+
 
