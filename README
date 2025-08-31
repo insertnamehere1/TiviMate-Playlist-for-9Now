@@ -1,0 +1,47 @@
+These files are used to create a docker container that servers up playlist.m3u8 files compatiable with 
+TiviMAte IPTV Player. 
+
+How to Creating Docker Kodi.proxy/9now container
+
+Place 3 files, Dockerfile, entrypoint.py and plugin.py in the same directory
+From that directory run:
+> docker build --no-cache -t kodi-proxy:latest .
+
+
+Modify docker-compose-yml to provide the data path on your local drive.
+
+To run your new docker based Channel 9 playlist:
+> docker compose up -d
+
+9Now initial setup:
+You need to run some commands inside the docker container 
+> docker exec -it kodi-proxy bash
+
+Now run the setup:
+kodi.proxy> python proxy.py
+
+Use these entry selections:
+	3:plugin - 1: slyguy.9now - 0: Login
+    		Goto 9now.com.au/activate and enter the code shown
+	when activated
+		8: settings - 1: Add-on - 0: Region (select your region)
+	enter <ctrl>C to exit the menu.
+
+Exit from the docker container and restart the container to pickup the new changes
+kodi.proxy> exit
+> docker compose restart kodi-proxy
+
+Test the server using a browser, go to <IP Address>:8181/playlist.m3u8 and you should download a valid playlist.m3u8
+
+FOR TiviMate setup
+In settings
+set TIVIMate playlist to <IP Address>:8181/playlist.m3u8
+To get the playlist for there channels set the TIVIMate playlist epg to Matt's epg.
+
+
+
+
+
+
+	
+
