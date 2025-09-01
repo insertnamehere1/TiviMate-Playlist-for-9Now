@@ -39,7 +39,7 @@ Test the server using a browser, go to <IP Address>:8181/playlist.m3u8 and you s
 FOR TiviMate setup
 In settings
 set TIVIMate playlist to <IP Address>:8181/playlist.m3u8
-To get the playlist for there channels set the TIVIMate playlist epg to Matt's epg.
+To get the playlist for the channels set the TIVIMate playlist epg to Matt's epg.
 
 
 
@@ -47,5 +47,6 @@ To get the playlist for there channels set the TIVIMate playlist epg to Matt's e
 
 
 	
+
 
 
